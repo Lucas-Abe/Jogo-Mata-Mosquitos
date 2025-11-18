@@ -1,0 +1,71 @@
+html{
+    cursor: url(../images/mata_mosca.png) 30 30, auto;
+}
+
+body{
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mosquito{
+    height: 50px;
+    width: 50px;
+}
+
+.mosquito2{
+    height: 70px;
+    width: 70px;
+}
+
+.mosquito3{
+    height: 90px;
+    width: 90px;
+}
+
+#painel{
+    width: 18%;
+    min-width: 250px;
+    max-width: 500px;
+    background: white;
+    opacity: 0.7;
+    font-size: 1.8em;
+    padding: 5px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+#selecionar-dificuldade{
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Página do Game Over*/
+
+.container-redirect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botao-redirect button{
+    height: 3em;
+    width: 10em;
+    background: #212529;
+    border-radius: 5px;
+    border-color: #1a1d20;
+    border-style: solid;
+    color: white;
+    font-size: 1.5em;
+}
+
+#botao-redirect button:hover{
+    background: #343a40;
+}
+
+#botao-redirect button.botao-invalido{
+    background: red ;
+}

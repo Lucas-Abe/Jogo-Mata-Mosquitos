@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Jogo do Pega-Mosquitos!</title>
+</head>
+
+<body>
+
+    <div class="container-redirect">
+
+        <div class="image-redirect">
+            <img src="assets/images/game.png" alt="">
+        </div>
+
+        <div id="espaco-dificuldade">
+
+            <select id="selecionar-dificuldade" class="form-control mb-3">
+                <option disabled selected value="">-- Selecione um nível de dificuldade --</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Difícil</option>
+                <option value="pesadelo">Pesadelo</option>
+            </select>
+
+        </div>
+
+        <div id="botao-redirect">
+            <button onclick="iniciarJogo()">Iniciar Jogo</button>
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
