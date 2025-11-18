@@ -1,7 +1,8 @@
-var altura = 0;
-var largura = 0;
-var vidas = 3;
-var tempo = 15;
+let altura = 0;
+let largura = 0;
+let vidas = 3;
+let tempo = 15;
+let pontos = 0;
 let dificuldade = localStorage.getItem('dificuldade');
 let mosquitoVelocidade = 2000;
 
@@ -45,7 +46,9 @@ function timer() {
         }
 }
 
-
+function pontuacao(){
+    document.getElementById('pontos').innerHTML = pontos;
+}
 
 function spawnMosquito() {
 
@@ -75,21 +78,34 @@ function spawnMosquito() {
         positionY = 0;
     }
 
-    var mosquito = document.createElement('img');
+    let mosquito = document.createElement('img');
     mosquito.src = 'assets/images/mosquito.png';
     mosquito.className = tamanhoMosquito();
     mosquito.style.top = positionY + 'px';
     mosquito.style.left = positionX + 'px';
     mosquito.style.position = 'absolute';
-    var flip = flipMosquito();
+    let flip = flipMosquito();
     mosquito.style.transform = 'scaleX(' + flip + ')';
     mosquito.id = 'mosquito';
-    mosquito.onclick = function () {
+
+    mosquito.addEventListener('click', function(){
+
+        if(mosquito.className == 'mosquito'){
+            pontos += 5;
+        }
+        else if(mosquito.className == 'mosquito2'){
+            pontos += 10;
+        }
+        else if(mosquito.className == 'mosquito3'){
+            pontos += 20;
+        }
+        pontuacao();
         this.remove();
-    }
+    })
 
     document.body.appendChild(mosquito);
 }
+
 
 function tamanhoMosquito() {
 
@@ -121,6 +137,7 @@ function flipMosquito() {
 
 function spawnControl() {
     timer();
+    pontuacao();
     setInterval(timer, 1000);
     setInterval(spawnMosquito, mosquitoVelocidade);
 }

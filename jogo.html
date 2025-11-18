@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do Pega-Mosquitos</title>
-    
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="shortcut icon" href="assets/images/mosquito.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,7 +13,7 @@
 
 <body onresize="medirTela()">
 
-    <div id="painel">
+    <div id="painel" style="border: 1px solid red;">
 
         <div id="vidas">
             <img id="hp1" src="assets/images/coracao_cheio.png" alt="">
@@ -22,6 +22,17 @@
         </div>
         <div id="painel-cronometro">
             Tempo restante: <span id="cronometro"></span>
+        </div>
+
+    </div>
+
+    <div id="painel-pontos" style="border: 1px solid red;">
+
+        <div id="pontos-title">
+            <h3>Pontos:</h3>
+        </div>
+        <div id="pontos-counter">
+            <span id="pontos"></span>
         </div>
 
     </div>
