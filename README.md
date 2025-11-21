@@ -5,7 +5,8 @@ Você possui 3 vidas, e caso demore para clicar no mosquito, você perde uma. Ca
 
 Próximas etapas do projeto que planejo aprimorar:
 -Colocar música de fundo
--Colocar sistema de pontos
+-Colocar sistema de pontos e desenvolver
+-Adicionar responsividade para dispositivos móveis
 -Colocar ranking de pontuação
 -Adicionar mais variedade de mosquitos
 -Adicionar mais formas de dificuldade
